@@ -9,6 +9,10 @@ import {
   useDisclosure,
   useColorModeValue,
   Container,
+  Menu,
+  MenuButton,
+  MenuList,
+  MenuItem,
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import { Link } from "wouter";
@@ -57,17 +61,26 @@ export default function Navbar() {
             spacing={8}
             display={{ base: "none", md: "flex" }}
           >
-            <Box
-              as="a"
-              href="#"
-              px={3}
-              py={2}
-              fontSize="sm"
-              fontWeight="medium"
-              color="gray.900"
-              _hover={{ color: "brand.500" }}
-            >
-              Akademi
+            <Box position="relative">
+              <Menu>
+                <MenuButton
+                  px={3}
+                  py={2}
+                  fontSize="sm"
+                  fontWeight="medium"
+                  color="gray.900"
+                  _hover={{ color: "brand.500" }}
+                >
+                  Akademi
+                </MenuButton>
+                <MenuList>
+                  <MenuItem>Game Development</MenuItem>
+                  <MenuItem>Digital Art</MenuItem>
+                  <MenuItem>3D Modeling</MenuItem>
+                  <MenuItem>Animation</MenuItem>
+                  <MenuItem>Sound Design</MenuItem>
+                </MenuList>
+              </Menu>
             </Box>
             <Box
               as="a"
