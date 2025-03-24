@@ -68,14 +68,15 @@ export default function CategorySlider() {
             <Flex
               transition="transform 0.3s ease"
               transform={`translateX(-${currentSlide * (100 / slidesToShow)}%)`}
-              width={`${(categories.length / slidesToShow) * 100}%`}
+              width={`${categories.length * 316}px`}
             >
               {categories.map((category, index) => (
                 <Flex
                   key={index}
                   px={3}
-                  width={`${100 / categories.length}%`}
+                  width="300px"
                   flexShrink={0}
+                  mx={2}
                 >
                   <Box
                     bg="gray.50"
