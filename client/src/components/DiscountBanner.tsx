@@ -1,5 +1,5 @@
 
-import { Box, Text, Container } from "@chakra-ui/react";
+import { Box, Text, Container, Link } from "@chakra-ui/react";
 
 export default function DiscountBanner() {
   return (
@@ -11,7 +11,7 @@ export default function DiscountBanner() {
           fontSize="sm"
           fontWeight="medium"
         >
-          🎉 Special Offer! Get 20% off on all courses with code EARLYBIRD 🎉
+          🎉<Link variant="underline" >Klik disini</Link> untuk mendapatkan diskon. 🎉
         </Text>
       </Container>
     </Box>

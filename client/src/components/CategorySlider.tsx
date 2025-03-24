@@ -14,16 +14,20 @@ import { ChevronLeftIcon, ChevronRightIcon } from '@chakra-ui/icons';
 const categories = [
   {
     title: 'Game Development',
-    description: 'Learn Development Membuat program game dari level dasar hingga advance, program sekolah, program mapping, serta program lainnya.',
+    description: 'Pelajari seluruh siklus pengembangan gim, mulai dari Game Design, Game Business, hingga Project Manager.',
   },
   {
     title: '2D Art',
-    description: 'Art Development Asset 2D object dari hasil program portofolio, program mapping, serta program lainnya.',
+    description: 'Tingkatkan kemampuan seni 2D kamu mulai dari UI/UX hingga Concept Art.',
   },
   {
     title: '3D Art',
-    description: 'Art Development Asset 3D object dari hasil program portofolio, program mapping, serta program lainnya.',
+    description: 'Tingkatkan kemampuan seni 3D kamu mulai dari modelling, rigging. hingga animasi.',
   },
+  {
+    title: 'Programmer',
+    description: 'Pelajari pembuatan gim menggunakan game engine terkemuka, mulai dari Unity, Unreal, dan lainnya.',
+  }
 ];
 
 export default function CategorySlider() {

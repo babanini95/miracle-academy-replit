@@ -11,17 +11,17 @@ import {
 const portfolioItems = [
   {
     title: "Games",
-    description: "Total mengerjakan beberapa project game dari berbagai program sekolah.",
+    description: "Telah Menghasilkan Berbagai macam jenis game dari hasil program pelatihan, program magang, serta program lainnya.",
     image: null,
   },
   {
     title: "2D Assets",
-    description: "Total mengerjakan Asset 2D object dari hasil project portofolio, program mapping.",
+    description: "Telah menghasilkan Asset 2D object dari hasil program pelatihan, program magang, serta program lainnya.",
     image: null,
   },
   {
     title: "3D Assets",
-    description: "Total mengerjakan Asset 3D object dari hasil project portofolio, program mapping.",
+    description: "Telah Menghasilkan Asset 3D game dari hasil program pelatihan, program magang, serta program lainnya.",
     image: null,
   },
 ];
@@ -92,7 +92,7 @@ export default function Portfolio() {
                   fontWeight="medium"
                   _hover={{ bg: "gray.50" }}
                 >
-                  Learn more
+                  Pelajari
                 </Button>
               </Box>
             </Box>

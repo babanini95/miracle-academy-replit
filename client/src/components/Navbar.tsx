@@ -48,9 +48,6 @@ export default function Navbar() {
                     MA
                   </Text>
                 </Flex>
-                <Text fontSize="xl" fontWeight="semibold" color="gray.900">
-                  Academy
-                </Text>
               </Flex>
             </Link>
           </Flex>
@@ -61,24 +58,23 @@ export default function Navbar() {
             spacing={8}
             display={{ base: "none", md: "flex" }}
           >
-            <Box position="relative">
+            <Box
+              as="a"
+              href="#"
+              px={3}
+              py={2}
+              fontSize="sm"
+              fontWeight="medium"
+              color="gray.500"
+              _hover={{ color: "brand.500" }}
+            >
               <Menu>
-                <MenuButton
-                  px={3}
-                  py={2}
-                  fontSize="sm"
-                  fontWeight="medium"
-                  color="gray.900"
-                  _hover={{ color: "brand.500" }}
-                >
-                  Akademi
-                </MenuButton>
+                <MenuButton>Akademi</MenuButton>
                 <MenuList>
                   <MenuItem>Game Development</MenuItem>
-                  <MenuItem>Digital Art</MenuItem>
-                  <MenuItem>3D Modeling</MenuItem>
-                  <MenuItem>Animation</MenuItem>
-                  <MenuItem>Sound Design</MenuItem>
+                  <MenuItem>2D Art</MenuItem>
+                  <MenuItem>3D Art</MenuItem>
+                  <MenuItem>Programming</MenuItem>
                 </MenuList>
               </Menu>
             </Box>
@@ -140,7 +136,13 @@ export default function Navbar() {
               color="gray.500"
               _hover={{ color: "brand.500" }}
             >
-              Tentang Kami
+              <Menu>
+                <MenuButton>Tentang Kami</MenuButton>
+                <MenuList>
+                  <MenuItem>Profil</MenuItem>
+                  <MenuItem>Kontak</MenuItem>
+                </MenuList>
+              </Menu>
             </Box>
           </Stack>
 
@@ -160,7 +162,7 @@ export default function Navbar() {
                 color: "white",
               }}
             >
-              Login
+              Daftar / Masuk
             </Button>
           </Box>
 
@@ -199,7 +201,15 @@ export default function Navbar() {
                 color="gray.900"
                 bg="gray.50"
               >
-                Home
+                <Menu>
+                  <MenuButton>Akademi</MenuButton>
+                  <MenuList>
+                    <MenuItem>Game Development</MenuItem>
+                    <MenuItem>2D Art</MenuItem>
+                    <MenuItem>3D Art</MenuItem>
+                    <MenuItem>Programming</MenuItem>
+                  </MenuList>
+                </Menu>
               </Box>
               <Box
                 as="a"
@@ -212,7 +222,7 @@ export default function Navbar() {
                 color="gray.500"
                 _hover={{ color: "gray.900", bg: "gray.50" }}
               >
-                Courses
+                Program
               </Box>
               <Box
                 as="a"
@@ -225,7 +235,7 @@ export default function Navbar() {
                 color="gray.500"
                 _hover={{ color: "gray.900", bg: "gray.50" }}
               >
-                Portfolio
+                IDGX Bootcamp 2024
               </Box>
               <Box
                 as="a"
@@ -238,7 +248,7 @@ export default function Navbar() {
                 color="gray.500"
                 _hover={{ color: "gray.900", bg: "gray.50" }}
               >
-                Resources
+                Acara & Event
               </Box>
               <Box
                 as="a"
@@ -251,7 +261,7 @@ export default function Navbar() {
                 color="gray.500"
                 _hover={{ color: "gray.900", bg: "gray.50" }}
               >
-                About
+                Partnership
               </Box>
               <Box
                 as="a"
@@ -264,7 +274,13 @@ export default function Navbar() {
                 color="gray.500"
                 _hover={{ color: "gray.900", bg: "gray.50" }}
               >
-                Contact
+                <Menu>
+                  <MenuButton>Tentang Kami</MenuButton>
+                  <MenuList>
+                    <MenuItem>Profil</MenuItem>
+                    <MenuItem>Kontak</MenuItem>
+                  </MenuList>
+                </Menu>
               </Box>
             </Stack>
             <Box pt={4} pb={3} borderTopWidth={1} borderColor="gray.200">
@@ -282,7 +298,7 @@ export default function Navbar() {
                   color: "white",
                 }}
               >
-                Login
+                Daftar / Masuk
               </Button>
             </Box>
           </Box>

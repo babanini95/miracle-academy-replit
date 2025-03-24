@@ -7,6 +7,7 @@ import {
   Stack,
   Text,
   useColorModeValue,
+  Image
 } from "@chakra-ui/react";
 
 export default function Hero() {
@@ -27,15 +28,12 @@ export default function Hero() {
                 color="gray.900"
                 lineHeight="tight"
               >
-                Level Up Your Game Development Skills
+                Tingkatkan skill game developmentmu!
               </Heading>
               <Stack spacing={3} color="gray.600" fontSize={{ base: "md", md: "lg" }}>
-                <Text>Meradu Academy adalah Online Learning Platform.</Text>
+                <Text>Miracle Academy adalah Online Learning Platform berada dibawah naungan Miracle Grup Indonesia yang merupakan salah satu perusahaan terbaik di Industri Pengembangan Game di Indonesia.</Text>
                 <Text>
-                  Metode Belajaran dengan Modul High Standard yang dikembangkan bersama para Expert serta Pengalaman Game & Interaktif.
-                </Text>
-                <Text>
-                  MA Academy menyediakan pembelajaran SDK terlengkap yang bisa kamu pelajari!
+                  Kami bertujuan untuk membantu menyediakan SDM berkualitas yang siap kerja pada Industri Pengembangan Game Indonesia.
                 </Text>
               </Stack>
               <Stack
@@ -49,7 +47,7 @@ export default function Hero() {
                   colorScheme="brand"
                   fontWeight="medium"
                 >
-                  Join for Free
+                  Mari Bergabung
                 </Button>
                 <Button
                   size="lg"
@@ -60,7 +58,7 @@ export default function Hero() {
                   fontWeight="medium"
                   _hover={{ bg: "gray.50" }}
                 >
-                  Learn more
+                  Pelajari
                 </Button>
               </Stack>
             </Stack>
@@ -75,7 +73,7 @@ export default function Hero() {
             alignItems="center"
             justifyContent="center"
           >
-            <svg
+            {/*<svg
               xmlns="http://www.w3.org/2000/svg"
               width="120"
               height="120"
@@ -90,7 +88,8 @@ export default function Hero() {
               <rect x="2" y="2" width="20" height="20" rx="2" ry="2" />
               <circle cx="12" cy="12" r="4" />
               <path d="M16 8v-2a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2" />
-            </svg>
+            </svg>*/}
+            <Image src="../../public/homepage-hero.png" alt="hero-image" />
           </Box>
         </Flex>
       </Container>
