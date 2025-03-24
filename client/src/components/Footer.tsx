@@ -16,12 +16,7 @@ import { FaFacebook, FaInstagram, FaTwitter, FaGithub } from "react-icons/fa";
 
 export default function Footer() {
   return (
-    <Box
-      as="footer"
-      bg="gray.100"
-      pt={12}
-      pb={6}
-    >
+    <Box as="footer" bg="gray.100" pt={12} pb={6}>
       <Container maxW="container.xl" px={{ base: 4, md: 6, lg: 8 }}>
         <SimpleGrid columns={{ base: 1, md: 4 }} spacing={8} mb={8}>
           <Box>
@@ -32,14 +27,40 @@ export default function Footer() {
               color="gray.900"
               mb={4}
             >
-              Product
+              Akademi
             </Heading>
             <Stack spacing={2}>
-              <Box as="a" href="#" color="gray.600" _hover={{ color: "brand.500" }}>
-                Pricing
+              <Box
+                as="a"
+                href="#"
+                color="gray.600"
+                _hover={{ color: "brand.500" }}
+              >
+                Game Development
               </Box>
-              <Box as="a" href="#" color="gray.600" _hover={{ color: "brand.500" }}>
-                Features
+              <Box
+                as="a"
+                href="#"
+                color="gray.600"
+                _hover={{ color: "brand.500" }}
+              >
+                2D Art
+              </Box>
+              <Box
+                as="a"
+                href="#"
+                color="gray.600"
+                _hover={{ color: "brand.500" }}
+              >
+                3D Art
+              </Box>
+              <Box
+                as="a"
+                href="#"
+                color="gray.600"
+                _hover={{ color: "brand.500" }}
+              >
+                Programmer
               </Box>
             </Stack>
           </Box>
@@ -55,13 +76,28 @@ export default function Footer() {
               Resources
             </Heading>
             <Stack spacing={2}>
-              <Box as="a" href="#" color="gray.600" _hover={{ color: "brand.500" }}>
+              <Box
+                as="a"
+                href="#"
+                color="gray.600"
+                _hover={{ color: "brand.500" }}
+              >
                 Blog
               </Box>
-              <Box as="a" href="#" color="gray.600" _hover={{ color: "brand.500" }}>
+              <Box
+                as="a"
+                href="#"
+                color="gray.600"
+                _hover={{ color: "brand.500" }}
+              >
                 Docs
               </Box>
-              <Box as="a" href="#" color="gray.600" _hover={{ color: "brand.500" }}>
+              <Box
+                as="a"
+                href="#"
+                color="gray.600"
+                _hover={{ color: "brand.500" }}
+              >
                 Community
               </Box>
             </Stack>
@@ -78,10 +114,20 @@ export default function Footer() {
               Company
             </Heading>
             <Stack spacing={2}>
-              <Box as="a" href="#" color="gray.600" _hover={{ color: "brand.500" }}>
+              <Box
+                as="a"
+                href="#"
+                color="gray.600"
+                _hover={{ color: "brand.500" }}
+              >
                 About
               </Box>
-              <Box as="a" href="#" color="gray.600" _hover={{ color: "brand.500" }}>
+              <Box
+                as="a"
+                href="#"
+                color="gray.600"
+                _hover={{ color: "brand.500" }}
+              >
                 Team
               </Box>
             </Stack>
@@ -98,7 +144,8 @@ export default function Footer() {
               Subscribe to our newsletter
             </Heading>
             <Text color="gray.600" mb={4}>
-              The latest news, articles, and resources, sent to your inbox weekly.
+              The latest news, articles, and resources, sent to your inbox
+              weekly.
             </Text>
             <Flex>
               <Input
@@ -137,7 +184,7 @@ export default function Footer() {
           pt={6}
         >
           <Text color="gray.500" fontSize="sm" mb={{ base: 4, md: 0 }}>
-            © 2023 MA Academy. All rights reserved.
+            © 2025 Miracle Akademi. All rights reserved.
           </Text>
           <Stack direction="row" spacing={6}>
             <IconButton
