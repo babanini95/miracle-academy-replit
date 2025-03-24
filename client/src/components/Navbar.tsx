@@ -17,12 +17,12 @@ export default function Navbar() {
   const { isOpen, onToggle } = useDisclosure();
 
   return (
-    <Box 
-      as="header" 
-      position="sticky" 
-      top="0" 
-      zIndex="50" 
-      bg={useColorModeValue("white", "gray.800")} 
+    <Box
+      as="header"
+      position="sticky"
+      top="0"
+      zIndex="50"
+      bg={useColorModeValue("white", "gray.800")}
       shadow="sm"
     >
       <Container maxW="container.xl" px={{ base: 4, md: 6, lg: 8 }}>
@@ -31,18 +31,22 @@ export default function Navbar() {
           <Flex alignItems="center">
             <Link href="/">
               <Flex align="center" cursor="pointer">
-                <Flex 
-                  w="8" 
-                  h="8" 
-                  mr="2" 
-                  rounded="md" 
-                  bg="brand.500" 
-                  alignItems="center" 
+                <Flex
+                  w="8"
+                  h="8"
+                  mr="2"
+                  rounded="md"
+                  bg="brand.500"
+                  alignItems="center"
                   justifyContent="center"
                 >
-                  <Text color="white" fontWeight="bold">MA</Text>
+                  <Text color="white" fontWeight="bold">
+                    MA
+                  </Text>
                 </Flex>
-                <Text fontSize="xl" fontWeight="semibold" color="gray.900">Academy</Text>
+                <Text fontSize="xl" fontWeight="semibold" color="gray.900">
+                  Academy
+                </Text>
               </Flex>
             </Link>
           </Flex>
@@ -53,12 +57,78 @@ export default function Navbar() {
             spacing={8}
             display={{ base: "none", md: "flex" }}
           >
-            <Box as="a" href="#" px={3} py={2} fontSize="sm" fontWeight="medium" color="gray.900" _hover={{ color: "brand.500" }}>Home</Box>
-            <Box as="a" href="#" px={3} py={2} fontSize="sm" fontWeight="medium" color="gray.500" _hover={{ color: "brand.500" }}>Courses</Box>
-            <Box as="a" href="#" px={3} py={2} fontSize="sm" fontWeight="medium" color="gray.500" _hover={{ color: "brand.500" }}>Portfolio</Box>
-            <Box as="a" href="#" px={3} py={2} fontSize="sm" fontWeight="medium" color="gray.500" _hover={{ color: "brand.500" }}>Resources</Box>
-            <Box as="a" href="#" px={3} py={2} fontSize="sm" fontWeight="medium" color="gray.500" _hover={{ color: "brand.500" }}>About</Box>
-            <Box as="a" href="#" px={3} py={2} fontSize="sm" fontWeight="medium" color="gray.500" _hover={{ color: "brand.500" }}>Contact</Box>
+            <Box
+              as="a"
+              href="#"
+              px={3}
+              py={2}
+              fontSize="sm"
+              fontWeight="medium"
+              color="gray.900"
+              _hover={{ color: "brand.500" }}
+            >
+              Akademi
+            </Box>
+            <Box
+              as="a"
+              href="#"
+              px={3}
+              py={2}
+              fontSize="sm"
+              fontWeight="medium"
+              color="gray.500"
+              _hover={{ color: "brand.500" }}
+            >
+              Program
+            </Box>
+            <Box
+              as="a"
+              href="#"
+              px={3}
+              py={2}
+              fontSize="sm"
+              fontWeight="medium"
+              color="gray.500"
+              _hover={{ color: "brand.500" }}
+            >
+              IDGX Bootcamp 2024
+            </Box>
+            <Box
+              as="a"
+              href="#"
+              px={3}
+              py={2}
+              fontSize="sm"
+              fontWeight="medium"
+              color="gray.500"
+              _hover={{ color: "brand.500" }}
+            >
+              Acara & Event
+            </Box>
+            <Box
+              as="a"
+              href="#"
+              px={3}
+              py={2}
+              fontSize="sm"
+              fontWeight="medium"
+              color="gray.500"
+              _hover={{ color: "brand.500" }}
+            >
+              Partnership
+            </Box>
+            <Box
+              as="a"
+              href="#"
+              px={3}
+              py={2}
+              fontSize="sm"
+              fontWeight="medium"
+              color="gray.500"
+              _hover={{ color: "brand.500" }}
+            >
+              Tentang Kami
+            </Box>
           </Stack>
 
           {/* Login Button */}
@@ -85,7 +155,9 @@ export default function Navbar() {
           <IconButton
             display={{ base: "flex", md: "none" }}
             onClick={onToggle}
-            icon={isOpen ? <CloseIcon w={3} h={3} /> : <HamburgerIcon w={5} h={5} />}
+            icon={
+              isOpen ? <CloseIcon w={3} h={3} /> : <HamburgerIcon w={5} h={5} />
+            }
             variant="ghost"
             aria-label="Toggle Navigation"
             color="gray.400"
@@ -103,12 +175,84 @@ export default function Navbar() {
             borderColor="gray.200"
           >
             <Stack spacing={1}>
-              <Box as="a" href="#" px={3} py={2} rounded="md" fontSize="base" fontWeight="medium" color="gray.900" bg="gray.50">Home</Box>
-              <Box as="a" href="#" px={3} py={2} rounded="md" fontSize="base" fontWeight="medium" color="gray.500" _hover={{ color: "gray.900", bg: "gray.50" }}>Courses</Box>
-              <Box as="a" href="#" px={3} py={2} rounded="md" fontSize="base" fontWeight="medium" color="gray.500" _hover={{ color: "gray.900", bg: "gray.50" }}>Portfolio</Box>
-              <Box as="a" href="#" px={3} py={2} rounded="md" fontSize="base" fontWeight="medium" color="gray.500" _hover={{ color: "gray.900", bg: "gray.50" }}>Resources</Box>
-              <Box as="a" href="#" px={3} py={2} rounded="md" fontSize="base" fontWeight="medium" color="gray.500" _hover={{ color: "gray.900", bg: "gray.50" }}>About</Box>
-              <Box as="a" href="#" px={3} py={2} rounded="md" fontSize="base" fontWeight="medium" color="gray.500" _hover={{ color: "gray.900", bg: "gray.50" }}>Contact</Box>
+              <Box
+                as="a"
+                href="#"
+                px={3}
+                py={2}
+                rounded="md"
+                fontSize="base"
+                fontWeight="medium"
+                color="gray.900"
+                bg="gray.50"
+              >
+                Home
+              </Box>
+              <Box
+                as="a"
+                href="#"
+                px={3}
+                py={2}
+                rounded="md"
+                fontSize="base"
+                fontWeight="medium"
+                color="gray.500"
+                _hover={{ color: "gray.900", bg: "gray.50" }}
+              >
+                Courses
+              </Box>
+              <Box
+                as="a"
+                href="#"
+                px={3}
+                py={2}
+                rounded="md"
+                fontSize="base"
+                fontWeight="medium"
+                color="gray.500"
+                _hover={{ color: "gray.900", bg: "gray.50" }}
+              >
+                Portfolio
+              </Box>
+              <Box
+                as="a"
+                href="#"
+                px={3}
+                py={2}
+                rounded="md"
+                fontSize="base"
+                fontWeight="medium"
+                color="gray.500"
+                _hover={{ color: "gray.900", bg: "gray.50" }}
+              >
+                Resources
+              </Box>
+              <Box
+                as="a"
+                href="#"
+                px={3}
+                py={2}
+                rounded="md"
+                fontSize="base"
+                fontWeight="medium"
+                color="gray.500"
+                _hover={{ color: "gray.900", bg: "gray.50" }}
+              >
+                About
+              </Box>
+              <Box
+                as="a"
+                href="#"
+                px={3}
+                py={2}
+                rounded="md"
+                fontSize="base"
+                fontWeight="medium"
+                color="gray.500"
+                _hover={{ color: "gray.900", bg: "gray.50" }}
+              >
+                Contact
+              </Box>
             </Stack>
             <Box pt={4} pb={3} borderTopWidth={1} borderColor="gray.200">
               <Button
