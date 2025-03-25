@@ -72,9 +72,10 @@ export default function Footer() {
                 as="a"
                 href="#"
                 color="gray.600"
-                _hover={{ color: "brand.500" }}
                 whileHover={{ x: 5, color: "#3182CE" }}
-                transition={{ duration: 0.2 }}
+                whileTap={{ scale: 0.98 }}
+                animate={{ x: 0, color: "gray.600" }}
+                transition={{ duration: 0.3 }}
               >
                 Game Development
               </MotionBox>
@@ -82,9 +83,10 @@ export default function Footer() {
                 as="a"
                 href="#"
                 color="gray.600"
-                _hover={{ color: "brand.500" }}
                 whileHover={{ x: 5, color: "#3182CE" }}
-                transition={{ duration: 0.2 }}
+                whileTap={{ scale: 0.98 }}
+                animate={{ x: 0, color: "gray.600" }}
+                transition={{ duration: 0.3 }}
               >
                 2D Art
               </MotionBox>
@@ -92,9 +94,10 @@ export default function Footer() {
                 as="a"
                 href="#"
                 color="gray.600"
-                _hover={{ color: "brand.500" }}
                 whileHover={{ x: 5, color: "#3182CE" }}
-                transition={{ duration: 0.2 }}
+                whileTap={{ scale: 0.98 }}
+                animate={{ x: 0, color: "gray.600" }}
+                transition={{ duration: 0.3 }}
               >
                 3D Art
               </MotionBox>
@@ -102,9 +105,10 @@ export default function Footer() {
                 as="a"
                 href="#"
                 color="gray.600"
-                _hover={{ color: "brand.500" }}
                 whileHover={{ x: 5, color: "#3182CE" }}
-                transition={{ duration: 0.2 }}
+                whileTap={{ scale: 0.98 }}
+                animate={{ x: 0, color: "gray.600" }}
+                transition={{ duration: 0.3 }}
               >
                 Programmer
               </MotionBox>
@@ -135,9 +139,10 @@ export default function Footer() {
                 as="a"
                 href="#"
                 color="gray.600"
-                _hover={{ color: "brand.500" }}
                 whileHover={{ x: 5, color: "#3182CE" }}
-                transition={{ duration: 0.2 }}
+                whileTap={{ scale: 0.98 }}
+                animate={{ x: 0, color: "gray.600" }}
+                transition={{ duration: 0.3 }}
               >
                 Blog
               </MotionBox>
@@ -145,9 +150,10 @@ export default function Footer() {
                 as="a"
                 href="#"
                 color="gray.600"
-                _hover={{ color: "brand.500" }}
                 whileHover={{ x: 5, color: "#3182CE" }}
-                transition={{ duration: 0.2 }}
+                whileTap={{ scale: 0.98 }}
+                animate={{ x: 0, color: "gray.600" }}
+                transition={{ duration: 0.3 }}
               >
                 Docs
               </MotionBox>
@@ -155,9 +161,10 @@ export default function Footer() {
                 as="a"
                 href="#"
                 color="gray.600"
-                _hover={{ color: "brand.500" }}
                 whileHover={{ x: 5, color: "#3182CE" }}
-                transition={{ duration: 0.2 }}
+                whileTap={{ scale: 0.98 }}
+                animate={{ x: 0, color: "gray.600" }}
+                transition={{ duration: 0.3 }}
               >
                 Community
               </MotionBox>
@@ -188,9 +195,10 @@ export default function Footer() {
                 as="a"
                 href="#"
                 color="gray.600"
-                _hover={{ color: "brand.500" }}
                 whileHover={{ x: 5, color: "#3182CE" }}
-                transition={{ duration: 0.2 }}
+                whileTap={{ scale: 0.98 }}
+                animate={{ x: 0, color: "gray.600" }}
+                transition={{ duration: 0.3 }}
               >
                 About
               </MotionBox>
@@ -198,9 +206,10 @@ export default function Footer() {
                 as="a"
                 href="#"
                 color="gray.600"
-                _hover={{ color: "brand.500" }}
                 whileHover={{ x: 5, color: "#3182CE" }}
-                transition={{ duration: 0.2 }}
+                whileTap={{ scale: 0.98 }}
+                animate={{ x: 0, color: "gray.600" }}
+                transition={{ duration: 0.3 }}
               >
                 Team
               </MotionBox>
@@ -299,9 +308,10 @@ export default function Footer() {
               size="sm"
               variant="ghost"
               color="gray.400"
-              _hover={{ color: "brand.500" }}
               whileHover={{ scale: 1.2, color: "#4267B2" }}
               whileTap={{ scale: 0.9 }}
+              animate={{ scale: 1, color: "gray.400" }}
+              transition={{ duration: 0.3 }}
             />
             <MotionIconButton
               aria-label="Instagram"
@@ -309,9 +319,10 @@ export default function Footer() {
               size="sm"
               variant="ghost"
               color="gray.400"
-              _hover={{ color: "brand.500" }}
               whileHover={{ scale: 1.2, color: "#E1306C" }}
               whileTap={{ scale: 0.9 }}
+              animate={{ scale: 1, color: "gray.400" }}
+              transition={{ duration: 0.3 }}
             />
             <MotionIconButton
               aria-label="Twitter"
@@ -319,9 +330,10 @@ export default function Footer() {
               size="sm"
               variant="ghost"
               color="gray.400"
-              _hover={{ color: "brand.500" }}
               whileHover={{ scale: 1.2, color: "#1DA1F2" }}
               whileTap={{ scale: 0.9 }}
+              animate={{ scale: 1, color: "gray.400" }}
+              transition={{ duration: 0.3 }}
             />
             <MotionIconButton
               aria-label="GitHub"
@@ -329,9 +341,10 @@ export default function Footer() {
               size="sm"
               variant="ghost"
               color="gray.400"
-              _hover={{ color: "brand.500" }}
               whileHover={{ scale: 1.2, color: "#333" }}
               whileTap={{ scale: 0.9 }}
+              animate={{ scale: 1, color: "gray.400" }}
+              transition={{ duration: 0.3 }}
             />
           </MotionStack>
         </MotionFlex>

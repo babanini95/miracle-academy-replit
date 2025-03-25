@@ -20,9 +20,16 @@ const MotionButton = motion(Button);
 const MotionImage = motion(Image);
 
 export default function Hero() {
-  // For the Hero section, we want content to be visible immediately
-  const textAnimation = useScrollAnimation<HTMLDivElement>({ triggerOnce: true });
-  const imageAnimation = useScrollAnimation<HTMLDivElement>({ threshold: 0.2, triggerOnce: true });
+  // Use animation hooks for text and image sections
+  const textAnimation = useScrollAnimation<HTMLDivElement>({ 
+    threshold: 0.1, 
+    triggerOnce: false 
+  });
+  
+  const imageAnimation = useScrollAnimation<HTMLDivElement>({ 
+    threshold: 0.1, 
+    triggerOnce: false 
+  });
   
   return (
     <Box as="section" py={{ base: 12, md: 20 }} bg="white">
@@ -34,8 +41,7 @@ export default function Hero() {
         >
           <MotionBox 
             flex={{ lg: 3 }}
-            initial={{ opacity: 1 }}
-            animate={{ opacity: 1 }}
+            ref={textAnimation.ref}
           >
             <Stack spacing={6}>
               <MotionHeading
@@ -44,27 +50,41 @@ export default function Hero() {
                 fontWeight="bold"
                 color="gray.900"
                 lineHeight="tight"
-                initial={{ opacity: 1 }}
-                animate={{ opacity: 1 }}
+                initial={{ opacity: 0, y: 20 }}
+                animate={textAnimation.isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
               >
                 Tingkatkan skill game developmentmu!
               </MotionHeading>
-              <Box>
+              <MotionBox
+                initial={{ opacity: 0 }}
+                animate={textAnimation.isVisible ? { opacity: 1 } : { opacity: 0 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+              >
                 <Stack spacing={3} color="gray.600" fontSize={{ base: "md", md: "lg" }}>
-                  <Text>
+                  <MotionText
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={textAnimation.isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
+                    transition={{ duration: 0.5, delay: 0.3 }}
+                  >
                     Miracle Academy adalah Online Learning Platform berada dibawah naungan Miracle Grup Indonesia yang merupakan salah satu perusahaan terbaik di Industri Pengembangan Game di Indonesia.
-                  </Text>
-                  <Text>
+                  </MotionText>
+                  <MotionText
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={textAnimation.isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
+                    transition={{ duration: 0.5, delay: 0.4 }}
+                  >
                     Kami bertujuan untuk membantu menyediakan SDM berkualitas yang siap kerja pada Industri Pengembangan Game Indonesia.
-                  </Text>
+                  </MotionText>
                 </Stack>
-              </Box>
+              </MotionBox>
               <MotionFlex
                 direction={{ base: "column", sm: "row" }}
                 gap={4}
                 pt={2}
-                initial={{ opacity: 1 }}
-                animate={{ opacity: 1 }}
+                initial={{ opacity: 0, y: 20 }}
+                animate={textAnimation.isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                transition={{ duration: 0.5, delay: 0.5 }}
               >
                 <MotionButton
                   size="lg"
@@ -107,10 +127,13 @@ export default function Hero() {
             <MotionImage 
               src="/homepage-hero.png" 
               alt="hero-image"
-              initial={{ scale: 1 }}
-              animate={{ scale: 1 }}
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={imageAnimation.isVisible 
+                ? { opacity: 1, scale: 1 } 
+                : { opacity: 0, scale: 0.95 }
+              }
               whileHover={{ scale: 1.05 }}
-              transition={{ duration: 0.5 }}
+              transition={{ duration: 0.7 }}
             />
           </Box>
         </Flex>
