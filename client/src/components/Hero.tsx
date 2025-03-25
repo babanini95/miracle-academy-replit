@@ -21,16 +21,16 @@ const MotionImage = motion(Image);
 
 export default function Hero() {
   // Use animation hooks for text and image sections
-  const textAnimation = useScrollAnimation<HTMLDivElement>({ 
-    threshold: 0.1, 
-    triggerOnce: false 
+  const textAnimation = useScrollAnimation<HTMLDivElement>({
+    threshold: 0.1,
+    triggerOnce: false
   });
-  
-  const imageAnimation = useScrollAnimation<HTMLDivElement>({ 
-    threshold: 0.1, 
-    triggerOnce: false 
+
+  const imageAnimation = useScrollAnimation<HTMLDivElement>({
+    threshold: 0.1,
+    triggerOnce: false
   });
-  
+
   return (
     <Box as="section" py={{ base: 12, md: 20 }} bg="white">
       <Container maxW="container.xl" px={{ base: 4, md: 6, lg: 8 }}>
@@ -39,7 +39,7 @@ export default function Hero() {
           gap={8}
           alignItems="center"
         >
-          <MotionBox 
+          <MotionBox
             flex={{ lg: 3 }}
             ref={textAnimation.ref}
           >
@@ -48,7 +48,7 @@ export default function Hero() {
                 as="h1"
                 fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }}
                 fontWeight="bold"
-                color="gray.900"
+                color="#111827"
                 lineHeight="tight"
                 initial={{ opacity: 0, y: 20 }}
                 animate={textAnimation.isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
@@ -124,12 +124,12 @@ export default function Hero() {
             justifyContent="center"
             overflow="hidden"
           >
-            <MotionImage 
-              src="/homepage-hero.png" 
+            <MotionImage
+              src="/homepage-hero.png"
               alt="hero-image"
               initial={{ opacity: 0, scale: 0.95 }}
-              animate={imageAnimation.isVisible 
-                ? { opacity: 1, scale: 1 } 
+              animate={imageAnimation.isVisible
+                ? { opacity: 1, scale: 1 }
                 : { opacity: 0, scale: 0.95 }
               }
               whileHover={{ scale: 1.05 }}

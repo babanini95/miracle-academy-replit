@@ -42,7 +42,7 @@ export default function CategorySlider() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const containerRef = useRef<HTMLDivElement>(null);
   const sectionAnimation = useScrollAnimation<HTMLDivElement>();
-  
+
   const slidesToShow = useBreakpointValue({ base: 1, md: 2 }) || 1;
   const maxSlide = Math.max(0, categories.length - slidesToShow);
 
@@ -55,10 +55,10 @@ export default function CategorySlider() {
   };
 
   return (
-    <Box 
-      as="section" 
-      py={12} 
-      bg="white" 
+    <Box
+      as="section"
+      py={12}
+      bg="white"
       position="relative"
       ref={sectionAnimation.ref}
       className={`section-reveal ${sectionAnimation.isVisible ? 'visible' : ''}`}
@@ -68,7 +68,7 @@ export default function CategorySlider() {
           as="h2"
           fontSize={{ base: '2xl', md: '3xl' }}
           fontWeight="bold"
-          color="gray.900"
+          color="#111827"
           mb={8}
           initial={{ opacity: 0, y: 20 }}
           animate={sectionAnimation.isVisible ? { opacity: 1, y: 0 } : {}}
@@ -77,7 +77,7 @@ export default function CategorySlider() {
           Kategori Kelas
         </MotionHeading>
 
-        <MotionBox 
+        <MotionBox
           position="relative"
           initial={{ opacity: 0 }}
           animate={sectionAnimation.isVisible ? { opacity: 1 } : {}}
@@ -144,7 +144,7 @@ export default function CategorySlider() {
                         as="h3"
                         fontSize="xl"
                         fontWeight="semibold"
-                        color="gray.900"
+                        color="#111827"
                         mb={2}
                       >
                         {category.title}

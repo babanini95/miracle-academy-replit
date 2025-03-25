@@ -35,11 +35,11 @@ const portfolioItems = [
 export default function Portfolio() {
   const sectionAnimation = useScrollAnimation<HTMLDivElement>();
   const cardAnimations = portfolioItems.map(() => useScrollAnimation<HTMLDivElement>({ threshold: 0.1 }));
-  
+
   return (
-    <Box 
-      as="section" 
-      py={12} 
+    <Box
+      as="section"
+      py={12}
       bg="gray.50"
       ref={sectionAnimation.ref}
       className={`section-reveal ${sectionAnimation.isVisible ? 'visible' : ''}`}
@@ -49,7 +49,7 @@ export default function Portfolio() {
           as="h2"
           fontSize={{ base: "2xl", md: "3xl" }}
           fontWeight="bold"
-          color="gray.900"
+          color="#111827"
           mb={8}
           initial={{ opacity: 0, y: 20 }}
           animate={sectionAnimation.isVisible ? { opacity: 1, y: 0 } : {}}

@@ -17,11 +17,11 @@ const MotionButton = motion(Button);
 export default function CTA() {
   const sectionAnimation = useScrollAnimation<HTMLDivElement>();
   const contentAnimation = useScrollAnimation<HTMLDivElement>();
-  
+
   return (
-    <Box 
-      as="section" 
-      py={12} 
+    <Box
+      as="section"
+      py={12}
       bg="white"
       ref={sectionAnimation.ref}
       className={`section-reveal ${sectionAnimation.isVisible ? 'visible' : ''}`}
@@ -72,9 +72,9 @@ export default function CTA() {
             </Box>
           </MotionBox>
 
-          <MotionBox 
-            textAlign="center" 
-            maxW="2xl" 
+          <MotionBox
+            textAlign="center"
+            maxW="2xl"
             mx="auto"
             ref={contentAnimation.ref}
             className={`fade-in ${contentAnimation.isVisible ? 'visible' : ''}`}
@@ -83,7 +83,7 @@ export default function CTA() {
               as="h2"
               fontSize={{ base: "2xl", md: "3xl" }}
               fontWeight="bold"
-              color="gray.900"
+              color="#111827"
               mb={3}
               initial={{ opacity: 0, y: 20 }}
               animate={contentAnimation.isVisible ? { opacity: 1, y: 0 } : {}}
@@ -91,8 +91,8 @@ export default function CTA() {
             >
               Tunggu apa lagi?
             </MotionHeading>
-            <MotionText 
-              color="gray.600" 
+            <MotionText
+              color="gray.600"
               mb={6}
               initial={{ opacity: 0 }}
               animate={contentAnimation.isVisible ? { opacity: 1 } : {}}

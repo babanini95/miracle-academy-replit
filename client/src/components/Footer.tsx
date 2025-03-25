@@ -57,7 +57,7 @@ export default function Footer() {
               as="h3"
               fontSize="lg"
               fontWeight="bold"
-              color="gray.900"
+              color="#111827"
               mb={4}
             >
               Akademi
@@ -124,7 +124,7 @@ export default function Footer() {
               as="h3"
               fontSize="lg"
               fontWeight="bold"
-              color="gray.900"
+              color="#111827"
               mb={4}
             >
               Resources
@@ -180,7 +180,7 @@ export default function Footer() {
               as="h3"
               fontSize="lg"
               fontWeight="bold"
-              color="gray.900"
+              color="#111827"
               mb={4}
             >
               Company
@@ -226,7 +226,7 @@ export default function Footer() {
               as="h3"
               fontSize="lg"
               fontWeight="bold"
-              color="gray.900"
+              color="#111827"
               mb={4}
             >
               Subscribe to our newsletter
@@ -302,10 +302,10 @@ export default function Footer() {
               icon={<FaFacebook />}
               size="sm"
               variant="ghost"
-              color="gray.400"
+              color="#6B7280"
               whileHover={{ scale: 1.2, color: "#4267B2" }}
               whileTap={{ scale: 0.9 }}
-              animate={{ scale: 1, color: "gray.400" }}
+              animate={{ scale: 1, color: "#6B7280" }}
               transition={{ duration: 0.3 }}
             />
             <MotionIconButton
@@ -313,10 +313,10 @@ export default function Footer() {
               icon={<FaInstagram />}
               size="sm"
               variant="ghost"
-              color="gray.400"
+              color="#6B7280"
               whileHover={{ scale: 1.2, color: "#E1306C" }}
               whileTap={{ scale: 0.9 }}
-              animate={{ scale: 1, color: "gray.400" }}
+              animate={{ scale: 1, color: "#6B7280" }}
               transition={{ duration: 0.3 }}
             />
             <MotionIconButton
@@ -324,10 +324,10 @@ export default function Footer() {
               icon={<FaTwitter />}
               size="sm"
               variant="ghost"
-              color="gray.400"
+              color="#6B7280"
               whileHover={{ scale: 1.2, color: "#1DA1F2" }}
               whileTap={{ scale: 0.9 }}
-              animate={{ scale: 1, color: "gray.400" }}
+              animate={{ scale: 1, color: "#6B7280" }}
               transition={{ duration: 0.3 }}
             />
             <MotionIconButton
@@ -335,10 +335,10 @@ export default function Footer() {
               icon={<FaGithub />}
               size="sm"
               variant="ghost"
-              color="gray.400"
+              color="#6B7280"
               whileHover={{ scale: 1.2, color: "#333" }}
               whileTap={{ scale: 0.9 }}
-              animate={{ scale: 1, color: "gray.400" }}
+              animate={{ scale: 1, color: "#6B7280" }}
               transition={{ duration: 0.3 }}
             />
           </MotionStack>

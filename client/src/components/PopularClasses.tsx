@@ -35,18 +35,18 @@ const popularClasses = [
 
 export default function PopularClasses() {
   const sectionAnimation = useScrollAnimation<HTMLDivElement>();
-  
+
   // Create individual animations for each card
   const card1Animation = useScrollAnimation<HTMLDivElement>();
   const card2Animation = useScrollAnimation<HTMLDivElement>();
   const card3Animation = useScrollAnimation<HTMLDivElement>();
-  
+
   const cardAnimations = [card1Animation, card2Animation, card3Animation];
-  
+
   return (
-    <Box 
-      as="section" 
-      py={12} 
+    <Box
+      as="section"
+      py={12}
       bg="gray.50"
       ref={sectionAnimation.ref}
       className={`section-reveal ${sectionAnimation.isVisible ? 'visible' : ''}`}
@@ -56,7 +56,7 @@ export default function PopularClasses() {
           as="h2"
           fontSize={{ base: "2xl", md: "3xl" }}
           fontWeight="bold"
-          color="gray.900"
+          color="#111827"
           mb={8}
           initial={{ opacity: 0, y: 20 }}
           animate={sectionAnimation.isVisible ? { opacity: 1, y: 0 } : {}}
@@ -65,8 +65,8 @@ export default function PopularClasses() {
           Kelas Popular
         </MotionHeading>
 
-        <MotionSimpleGrid 
-          columns={{ base: 1, md: 3 }} 
+        <MotionSimpleGrid
+          columns={{ base: 1, md: 3 }}
           spacing={6}
           initial={{ opacity: 0 }}
           animate={sectionAnimation.isVisible ? { opacity: 1 } : {}}

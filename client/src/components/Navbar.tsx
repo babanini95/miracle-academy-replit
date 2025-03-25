@@ -175,7 +175,7 @@ export default function Navbar() {
             }
             variant="ghost"
             aria-label="Toggle Navigation"
-            color="gray.400"
+            color="#6B7280"
             _hover={{ color: "gray.500", bg: "gray.100" }}
             _focus={{ outline: "none", ring: "2px", ringColor: "brand.500" }}
           />
