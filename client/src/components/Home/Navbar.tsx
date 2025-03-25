@@ -60,7 +60,7 @@ export default function Navbar() {
           >
             <Box
               as="a"
-              href="#"
+              href="/akademi"
               px={3}
               py={2}
               fontSize="sm"
