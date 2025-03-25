@@ -29,20 +29,20 @@ const MotionSimpleGrid = motion(SimpleGrid);
 export default function Footer() {
   const sectionAnimation = useScrollAnimation<HTMLDivElement>();
   const newsletterAnimation = useScrollAnimation<HTMLDivElement>();
-  
+
   return (
-    <Box 
-      as="footer" 
-      bg="gray.100" 
-      pt={12} 
+    <Box
+      as="footer"
+      bg="gray.100"
+      pt={12}
       pb={6}
       ref={sectionAnimation.ref}
-      className={`section-reveal ${sectionAnimation.isVisible ? 'visible' : ''}`}
+      className={`section-reveal ${sectionAnimation.isVisible ? "visible" : ""}`}
     >
       <Container maxW="container.xl" px={{ base: 4, md: 6, lg: 8 }}>
-        <MotionSimpleGrid 
-          columns={{ base: 1, md: 4 }} 
-          spacing={8} 
+        <MotionSimpleGrid
+          columns={{ base: 1, md: 4 }}
+          spacing={8}
           mb={8}
           initial={{ opacity: 0, y: 20 }}
           animate={sectionAnimation.isVisible ? { opacity: 1, y: 0 } : {}}
@@ -62,7 +62,7 @@ export default function Footer() {
             >
               Akademi
             </MotionHeading>
-            <MotionStack 
+            <MotionStack
               spacing={2}
               initial={{ opacity: 0 }}
               animate={sectionAnimation.isVisible ? { opacity: 1 } : {}}
@@ -71,10 +71,10 @@ export default function Footer() {
               <MotionBox
                 as="a"
                 href="#"
-                color="gray.600"
+                color="gray"
                 whileHover={{ x: 5, color: "#3182CE" }}
                 whileTap={{ scale: 0.98 }}
-                animate={{ x: 0, color: "gray.600" }}
+                animate={{ x: 0, color: "gray" }}
                 transition={{ duration: 0.3 }}
               >
                 Game Development
@@ -82,10 +82,10 @@ export default function Footer() {
               <MotionBox
                 as="a"
                 href="#"
-                color="gray.600"
+                color="gray"
                 whileHover={{ x: 5, color: "#3182CE" }}
                 whileTap={{ scale: 0.98 }}
-                animate={{ x: 0, color: "gray.600" }}
+                animate={{ x: 0, color: "gray" }}
                 transition={{ duration: 0.3 }}
               >
                 2D Art
@@ -93,10 +93,10 @@ export default function Footer() {
               <MotionBox
                 as="a"
                 href="#"
-                color="gray.600"
+                color="gray"
                 whileHover={{ x: 5, color: "#3182CE" }}
                 whileTap={{ scale: 0.98 }}
-                animate={{ x: 0, color: "gray.600" }}
+                animate={{ x: 0, color: "gray" }}
                 transition={{ duration: 0.3 }}
               >
                 3D Art
@@ -104,10 +104,10 @@ export default function Footer() {
               <MotionBox
                 as="a"
                 href="#"
-                color="gray.600"
+                color="gray"
                 whileHover={{ x: 5, color: "#3182CE" }}
                 whileTap={{ scale: 0.98 }}
-                animate={{ x: 0, color: "gray.600" }}
+                animate={{ x: 0, color: "gray" }}
                 transition={{ duration: 0.3 }}
               >
                 Programmer
@@ -129,7 +129,7 @@ export default function Footer() {
             >
               Resources
             </MotionHeading>
-            <MotionStack 
+            <MotionStack
               spacing={2}
               initial={{ opacity: 0 }}
               animate={sectionAnimation.isVisible ? { opacity: 1 } : {}}
@@ -138,10 +138,10 @@ export default function Footer() {
               <MotionBox
                 as="a"
                 href="#"
-                color="gray.600"
+                color="gray"
                 whileHover={{ x: 5, color: "#3182CE" }}
                 whileTap={{ scale: 0.98 }}
-                animate={{ x: 0, color: "gray.600" }}
+                animate={{ x: 0, color: "gray" }}
                 transition={{ duration: 0.3 }}
               >
                 Blog
@@ -149,10 +149,10 @@ export default function Footer() {
               <MotionBox
                 as="a"
                 href="#"
-                color="gray.600"
+                color="gray"
                 whileHover={{ x: 5, color: "#3182CE" }}
                 whileTap={{ scale: 0.98 }}
-                animate={{ x: 0, color: "gray.600" }}
+                animate={{ x: 0, color: "gray" }}
                 transition={{ duration: 0.3 }}
               >
                 Docs
@@ -160,10 +160,10 @@ export default function Footer() {
               <MotionBox
                 as="a"
                 href="#"
-                color="gray.600"
+                color="gray"
                 whileHover={{ x: 5, color: "#3182CE" }}
                 whileTap={{ scale: 0.98 }}
-                animate={{ x: 0, color: "gray.600" }}
+                animate={{ x: 0, color: "gray" }}
                 transition={{ duration: 0.3 }}
               >
                 Community
@@ -185,7 +185,7 @@ export default function Footer() {
             >
               Company
             </MotionHeading>
-            <MotionStack 
+            <MotionStack
               spacing={2}
               initial={{ opacity: 0 }}
               animate={sectionAnimation.isVisible ? { opacity: 1 } : {}}
@@ -194,10 +194,10 @@ export default function Footer() {
               <MotionBox
                 as="a"
                 href="#"
-                color="gray.600"
+                color="gray"
                 whileHover={{ x: 5, color: "#3182CE" }}
                 whileTap={{ scale: 0.98 }}
-                animate={{ x: 0, color: "gray.600" }}
+                animate={{ x: 0, color: "gray" }}
                 transition={{ duration: 0.3 }}
               >
                 About
@@ -205,10 +205,10 @@ export default function Footer() {
               <MotionBox
                 as="a"
                 href="#"
-                color="gray.600"
+                color="gray"
                 whileHover={{ x: 5, color: "#3182CE" }}
                 whileTap={{ scale: 0.98 }}
-                animate={{ x: 0, color: "gray.600" }}
+                animate={{ x: 0, color: "gray" }}
                 transition={{ duration: 0.3 }}
               >
                 Team
@@ -231,8 +231,8 @@ export default function Footer() {
             >
               Subscribe to our newsletter
             </MotionHeading>
-            <MotionText 
-              color="gray.600" 
+            <MotionText
+              color="gray"
               mb={4}
               initial={{ opacity: 0 }}
               animate={newsletterAnimation.isVisible ? { opacity: 1 } : {}}
@@ -243,7 +243,9 @@ export default function Footer() {
             </MotionText>
             <MotionFlex
               initial={{ opacity: 0, y: 10 }}
-              animate={newsletterAnimation.isVisible ? { opacity: 1, y: 0 } : {}}
+              animate={
+                newsletterAnimation.isVisible ? { opacity: 1, y: 0 } : {}
+              }
               transition={{ duration: 0.5, delay: 0.6 }}
             >
               <Input
@@ -275,7 +277,7 @@ export default function Footer() {
           </MotionBox>
         </MotionSimpleGrid>
 
-        <MotionDivider 
+        <MotionDivider
           borderColor="gray.200"
           initial={{ opacity: 0, scaleX: 0 }}
           animate={sectionAnimation.isVisible ? { opacity: 1, scaleX: 1 } : {}}
@@ -291,17 +293,10 @@ export default function Footer() {
           animate={sectionAnimation.isVisible ? { opacity: 1 } : {}}
           transition={{ duration: 0.5, delay: 0.7 }}
         >
-          <MotionText 
-            color="gray.500" 
-            fontSize="sm" 
-            mb={{ base: 4, md: 0 }}
-          >
+          <MotionText color="gray.500" fontSize="sm" mb={{ base: 4, md: 0 }}>
             © 2025 Miracle Akademi. All rights reserved.
           </MotionText>
-          <MotionStack 
-            direction="row" 
-            spacing={6}
-          >
+          <MotionStack direction="row" spacing={6}>
             <MotionIconButton
               aria-label="Facebook"
               icon={<FaFacebook />}

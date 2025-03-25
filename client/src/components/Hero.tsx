@@ -61,7 +61,7 @@ export default function Hero() {
                 animate={textAnimation.isVisible ? { opacity: 1 } : { opacity: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
               >
-                <Stack spacing={3} color="gray.600" fontSize={{ base: "md", md: "lg" }}>
+                <Stack spacing={3} color="black" fontSize={{ base: "md", md: "lg" }}>
                   <MotionText
                     initial={{ opacity: 0, y: 10 }}
                     animate={textAnimation.isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
