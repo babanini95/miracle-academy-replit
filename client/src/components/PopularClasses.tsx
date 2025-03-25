@@ -7,6 +7,13 @@ import {
   SimpleGrid,
   useColorModeValue,
 } from "@chakra-ui/react";
+import { useScrollAnimation } from "@/hooks/use-scroll-animation";
+import { motion } from "framer-motion";
+
+const MotionBox = motion(Box);
+const MotionHeading = motion(Heading);
+const MotionButton = motion(Button);
+const MotionSimpleGrid = motion(SimpleGrid);
 
 const popularClasses = [
   {
@@ -27,36 +34,66 @@ const popularClasses = [
 ];
 
 export default function PopularClasses() {
+  const sectionAnimation = useScrollAnimation<HTMLDivElement>();
+  
+  // Create individual animations for each card
+  const card1Animation = useScrollAnimation<HTMLDivElement>();
+  const card2Animation = useScrollAnimation<HTMLDivElement>();
+  const card3Animation = useScrollAnimation<HTMLDivElement>();
+  
+  const cardAnimations = [card1Animation, card2Animation, card3Animation];
+  
   return (
-    <Box as="section" py={12} bg="gray.50">
+    <Box 
+      as="section" 
+      py={12} 
+      bg="gray.50"
+      ref={sectionAnimation.ref}
+      className={`section-reveal ${sectionAnimation.isVisible ? 'visible' : ''}`}
+    >
       <Container maxW="container.xl" px={{ base: 4, md: 6, lg: 8 }}>
-        <Heading
+        <MotionHeading
           as="h2"
           fontSize={{ base: "2xl", md: "3xl" }}
           fontWeight="bold"
           color="gray.900"
           mb={8}
+          initial={{ opacity: 0, y: 20 }}
+          animate={sectionAnimation.isVisible ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6 }}
         >
           Kelas Popular
-        </Heading>
+        </MotionHeading>
 
-        <SimpleGrid columns={{ base: 1, md: 3 }} spacing={6}>
+        <MotionSimpleGrid 
+          columns={{ base: 1, md: 3 }} 
+          spacing={6}
+          initial={{ opacity: 0 }}
+          animate={sectionAnimation.isVisible ? { opacity: 1 } : {}}
+          transition={{ duration: 0.3 }}
+        >
           {popularClasses.map((item, index) => (
-            <Box
+            <MotionBox
               key={index}
+              ref={cardAnimations[index].ref}
+              className={`animate-fade-up ${cardAnimations[index].isVisible ? 'visible' : ''}`}
               bg="white"
               rounded="lg"
               shadow="md"
               overflow="hidden"
-              transition="all 0.2s"
-              _hover={{ shadow: "lg" }}
+              _hover={{ shadow: "lg", transform: "translateY(-5px)" }}
+              initial={{ opacity: 0, y: 30 }}
+              animate={cardAnimations[index].isVisible ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.6, delay: index * 0.2 }}
             >
-              <Box
+              <MotionBox
                 h="48"
                 bg="gray.200"
                 display="flex"
                 alignItems="center"
                 justifyContent="center"
+                whileHover={{ scale: 1.05 }}
+                transition={{ duration: 0.3 }}
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -74,7 +111,7 @@ export default function PopularClasses() {
                   <circle cx="8.5" cy="8.5" r="1.5" />
                   <polyline points="21 15 16 10 5 21" />
                 </svg>
-              </Box>
+              </MotionBox>
               <Box p={6}>
                 <Heading as="h3" fontSize="xl" fontWeight="semibold" color="gray.900" mb={2}>
                   {item.title}
@@ -82,7 +119,7 @@ export default function PopularClasses() {
                 <Text color="gray.600" mb={4}>
                   {item.description}
                 </Text>
-                <Button
+                <MotionButton
                   px={4}
                   py={2}
                   variant="outline"
@@ -91,13 +128,15 @@ export default function PopularClasses() {
                   fontSize="sm"
                   fontWeight="medium"
                   _hover={{ bg: "gray.50" }}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
                 >
-                  Learn more
-                </Button>
+                  Pelajari
+                </MotionButton>
               </Box>
-            </Box>
+            </MotionBox>
           ))}
-        </SimpleGrid>
+        </MotionSimpleGrid>
       </Container>
     </Box>
   );
