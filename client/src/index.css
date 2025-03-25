@@ -9,51 +9,5 @@
 
   body {
     @apply font-sans antialiased bg-background text-foreground;
-    scroll-behavior: smooth;
   }
-}
-
-/* Animation classes */
-.animate-fade-up {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
-
-.animate-fade-up.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.animate-fade-in {
-  opacity: 0;
-  transition: opacity 0.6s ease-out;
-}
-
-.animate-fade-in.visible {
-  opacity: 1;
-}
-
-.animate-stagger-1 {
-  transition-delay: 0.1s;
-}
-
-.animate-stagger-2 {
-  transition-delay: 0.2s;
-}
-
-.animate-stagger-3 {
-  transition-delay: 0.3s;
-}
-
-/* Scroll reveal on sections */
-.section-reveal {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-}
-
-.section-reveal.visible {
-  opacity: 1;
-  transform: translateY(0);
 }

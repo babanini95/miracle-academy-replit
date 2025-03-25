@@ -10,14 +10,6 @@ import {
   useBreakpointValue,
 } from '@chakra-ui/react';
 import { ChevronLeftIcon, ChevronRightIcon } from '@chakra-ui/icons';
-import { useScrollAnimation } from "@/hooks/use-scroll-animation";
-import { motion } from "framer-motion";
-
-const MotionBox = motion(Box);
-const MotionHeading = motion(Heading);
-const MotionFlex = motion(Flex);
-const MotionButton = motion(Button);
-const MotionIconButton = motion(IconButton);
 
 const categories = [
   {
@@ -41,7 +33,6 @@ const categories = [
 export default function CategorySlider() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const containerRef = useRef<HTMLDivElement>(null);
-  const sectionAnimation = useScrollAnimation<HTMLDivElement>();
   
   const slidesToShow = useBreakpointValue({ base: 1, md: 2 }) || 1;
   const maxSlide = Math.max(0, categories.length - slidesToShow);
@@ -55,72 +46,54 @@ export default function CategorySlider() {
   };
 
   return (
-    <Box 
-      as="section" 
-      py={12} 
-      bg="white" 
-      position="relative"
-      ref={sectionAnimation.ref}
-      className={`section-reveal ${sectionAnimation.isVisible ? 'visible' : ''}`}
-    >
+    <Box as="section" py={12} bg="white" position="relative">
       <Container maxW="container.xl" px={{ base: 4, md: 6, lg: 8 }}>
-        <MotionHeading
+        <Heading
           as="h2"
           fontSize={{ base: '2xl', md: '3xl' }}
           fontWeight="bold"
           color="gray.900"
           mb={8}
-          initial={{ opacity: 0, y: 20 }}
-          animate={sectionAnimation.isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
         >
           Kategori Kelas
-        </MotionHeading>
+        </Heading>
 
-        <MotionBox 
-          position="relative"
-          initial={{ opacity: 0 }}
-          animate={sectionAnimation.isVisible ? { opacity: 1 } : {}}
-          transition={{ duration: 0.8, delay: 0.2 }}
-        >
+        <Box position="relative">
           <Flex
             ref={containerRef}
             overflow="hidden"
             position="relative"
             width="100%"
           >
-            <MotionFlex
-              transition={{ duration: 0.5 }}
-              style={{ transform: `translateX(-${currentSlide * (100 / slidesToShow)}%)` }}
+            <Flex
+              transition="transform 0.3s ease"
+              transform={`translateX(-${currentSlide * (100 / slidesToShow)}%)`}
               width={`${categories.length * 316}px`}
             >
               {categories.map((category, index) => (
-                <MotionFlex
+                <Flex
                   key={index}
                   px={3}
                   width="300px"
                   flexShrink={0}
                   mx={2}
-                  whileHover={{ y: -5 }}
-                  transition={{ duration: 0.3 }}
                 >
                   <Box
                     bg="gray.50"
                     rounded="lg"
                     shadow="sm"
                     overflow="hidden"
-                    _hover={{ shadow: 'lg' }}
+                    transition="all 0.2s"
+                    _hover={{ shadow: 'md' }}
                     height="100%"
                     width="100%"
                   >
-                    <MotionBox
+                    <Box
                       h="48"
                       bg="gray.200"
                       display="flex"
                       alignItems="center"
                       justifyContent="center"
-                      whileHover={{ scale: 1.05 }}
-                      transition={{ duration: 0.3 }}
                     >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -138,7 +111,7 @@ export default function CategorySlider() {
                         <circle cx="8.5" cy="8.5" r="1.5" />
                         <polyline points="21 15 16 10 5 21" />
                       </svg>
-                    </MotionBox>
+                    </Box>
                     <Box p={6}>
                       <Heading
                         as="h3"
@@ -152,7 +125,7 @@ export default function CategorySlider() {
                       <Text color="gray.600" mb={4}>
                         {category.description}
                       </Text>
-                      <MotionButton
+                      <Button
                         px={4}
                         py={2}
                         variant="outline"
@@ -161,20 +134,18 @@ export default function CategorySlider() {
                         fontSize="sm"
                         fontWeight="medium"
                         _hover={{ bg: 'gray.50' }}
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
                       >
-                        Pelajari
-                      </MotionButton>
+                        Learn more
+                      </Button>
                     </Box>
                   </Box>
-                </MotionFlex>
+                </Flex>
               ))}
-            </MotionFlex>
+            </Flex>
           </Flex>
 
           {/* Slider Controls */}
-          <MotionIconButton
+          <IconButton
             aria-label="Previous slide"
             icon={<ChevronLeftIcon />}
             position="absolute"
@@ -190,10 +161,8 @@ export default function CategorySlider() {
             isDisabled={currentSlide === 0}
             opacity={currentSlide === 0 ? 0.5 : 1}
             _hover={{ color: 'brand.500' }}
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
           />
-          <MotionIconButton
+          <IconButton
             aria-label="Next slide"
             icon={<ChevronRightIcon />}
             position="absolute"
@@ -209,10 +178,8 @@ export default function CategorySlider() {
             isDisabled={currentSlide >= maxSlide}
             opacity={currentSlide >= maxSlide ? 0.5 : 1}
             _hover={{ color: 'brand.500' }}
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
           />
-        </MotionBox>
+        </Box>
       </Container>
     </Box>
   );
