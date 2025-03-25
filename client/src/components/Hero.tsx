@@ -20,8 +20,9 @@ const MotionButton = motion(Button);
 const MotionImage = motion(Image);
 
 export default function Hero() {
-  const textAnimation = useScrollAnimation<HTMLDivElement>();
-  const imageAnimation = useScrollAnimation<HTMLDivElement>({ threshold: 0.2 });
+  // For the Hero section, we want content to be visible immediately
+  const textAnimation = useScrollAnimation<HTMLDivElement>({ triggerOnce: true });
+  const imageAnimation = useScrollAnimation<HTMLDivElement>({ threshold: 0.2, triggerOnce: true });
   
   return (
     <Box as="section" py={{ base: 12, md: 20 }} bg="white">
@@ -33,9 +34,8 @@ export default function Hero() {
         >
           <MotionBox 
             flex={{ lg: 3 }}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
+            initial={{ opacity: 1 }}
+            animate={{ opacity: 1 }}
           >
             <Stack spacing={6}>
               <MotionHeading
@@ -44,18 +44,17 @@ export default function Hero() {
                 fontWeight="bold"
                 color="gray.900"
                 lineHeight="tight"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.1 }}
+                initial={{ opacity: 1 }}
+                animate={{ opacity: 1 }}
               >
                 Tingkatkan skill game developmentmu!
               </MotionHeading>
-              <Box ref={textAnimation.ref} className={`animate-fade-up ${textAnimation.isVisible ? 'visible' : ''}`}>
+              <Box>
                 <Stack spacing={3} color="gray.600" fontSize={{ base: "md", md: "lg" }}>
-                  <Text className="animate-fade-up animate-stagger-1">
+                  <Text>
                     Miracle Academy adalah Online Learning Platform berada dibawah naungan Miracle Grup Indonesia yang merupakan salah satu perusahaan terbaik di Industri Pengembangan Game di Indonesia.
                   </Text>
-                  <Text className="animate-fade-up animate-stagger-2">
+                  <Text>
                     Kami bertujuan untuk membantu menyediakan SDM berkualitas yang siap kerja pada Industri Pengembangan Game Indonesia.
                   </Text>
                 </Stack>
@@ -64,9 +63,8 @@ export default function Hero() {
                 direction={{ base: "column", sm: "row" }}
                 gap={4}
                 pt={2}
-                initial={{ opacity: 0 }}
+                initial={{ opacity: 1 }}
                 animate={{ opacity: 1 }}
-                transition={{ duration: 0.5, delay: 0.4 }}
               >
                 <MotionButton
                   size="lg"
@@ -96,7 +94,6 @@ export default function Hero() {
           </MotionBox>
           <Box
             ref={imageAnimation.ref}
-            className={`section-reveal ${imageAnimation.isVisible ? 'visible' : ''}`}
             flex={{ lg: 2 }}
             w="full"
             bg="gray.100"
@@ -110,9 +107,10 @@ export default function Hero() {
             <MotionImage 
               src="/homepage-hero.png" 
               alt="hero-image"
-              initial={{ scale: 1.1 }}
+              initial={{ scale: 1 }}
               animate={{ scale: 1 }}
-              transition={{ duration: 0.8 }}
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.5 }}
             />
           </Box>
         </Flex>
