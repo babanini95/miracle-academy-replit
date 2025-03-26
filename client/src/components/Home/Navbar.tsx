@@ -60,7 +60,6 @@ export default function Navbar() {
           >
             <Box
               as="a"
-              href="/akademi"
               px={3}
               py={2}
               fontSize="sm"
@@ -128,7 +127,6 @@ export default function Navbar() {
             </Box>
             <Box
               as="a"
-              href="#"
               px={3}
               py={2}
               fontSize="sm"
@@ -192,7 +190,6 @@ export default function Navbar() {
             <Stack spacing={1}>
               <Box
                 as="a"
-                href="#"
                 px={3}
                 py={2}
                 rounded="md"
@@ -265,7 +262,6 @@ export default function Navbar() {
               </Box>
               <Box
                 as="a"
-                href="#"
                 px={3}
                 py={2}
                 rounded="md"
