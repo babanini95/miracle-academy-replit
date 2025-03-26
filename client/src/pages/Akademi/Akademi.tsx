@@ -9,8 +9,8 @@ import {
 import { motion } from "framer-motion";
 
 const MotionBox = motion(Box);
-import Navbar from "@/components/Home/Navbar";
-import Footer from "@/components/Home/Footer";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 function CategoryCard({
   title,
