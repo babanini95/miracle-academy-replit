@@ -16,9 +16,12 @@ import {
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import { Link } from "wouter";
+import { useState } from "react";
 
 export default function Navbar() {
   const { isOpen, onToggle } = useDisclosure();
+  const [isAkademiMenuOpen, setIsAkademiMenuOpen] = useState(false);
+  const [isTentangKamiMenuOpen, setIsTentangKamiMenuOpen] = useState(false);
 
   return (
     <Box
@@ -58,6 +61,7 @@ export default function Navbar() {
             spacing={8}
             display={{ base: "none", md: "flex" }}
           >
+            {/* Akademi Menu */}
             <Box
               as="a"
               px={3}
@@ -66,10 +70,15 @@ export default function Navbar() {
               fontWeight="medium"
               color="gray.500"
               _hover={{ color: "brand.500" }}
+              onMouseEnter={() => setIsAkademiMenuOpen(true)}
+              onMouseLeave={() => setIsAkademiMenuOpen(false)}
             >
-              <Menu>
+              <Menu isOpen={isAkademiMenuOpen}>
                 <MenuButton>Akademi</MenuButton>
-                <MenuList>
+                <MenuList 
+                  onMouseEnter={() => setIsAkademiMenuOpen(true)}
+                  onMouseLeave={() => setIsAkademiMenuOpen(false)}
+                >
                   <MenuItem>Game Development</MenuItem>
                   <MenuItem>2D Art</MenuItem>
                   <MenuItem>3D Art</MenuItem>
@@ -125,6 +134,7 @@ export default function Navbar() {
             >
               Partnership
             </Box>
+            {/* Tentang Kami Menu */}
             <Box
               as="a"
               px={3}
@@ -133,10 +143,15 @@ export default function Navbar() {
               fontWeight="medium"
               color="gray.500"
               _hover={{ color: "brand.500" }}
+              onMouseEnter={() => setIsTentangKamiMenuOpen(true)}
+              onMouseLeave={() => setIsTentangKamiMenuOpen(false)}
             >
-              <Menu>
+              <Menu isOpen={isTentangKamiMenuOpen}>
                 <MenuButton>Tentang Kami</MenuButton>
-                <MenuList>
+                <MenuList 
+                  onMouseEnter={() => setIsTentangKamiMenuOpen(true)}
+                  onMouseLeave={() => setIsTentangKamiMenuOpen(false)}
+                >
                   <MenuItem>Profil</MenuItem>
                   <MenuItem>Kontak</MenuItem>
                 </MenuList>
