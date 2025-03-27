@@ -15,7 +15,7 @@ import {
   MenuItem,
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
-import { Link } from "wouter";
+import { Link } from "react-router-dom";
 import { useState } from "react";
 
 export default function Navbar() {
@@ -36,7 +36,7 @@ export default function Navbar() {
         <Flex h="16" alignItems="center" justifyContent="space-between">
           {/* Logo */}
           <Flex alignItems="center">
-            <Link href="/">
+            <Link to="/">
               <Flex align="center" cursor="pointer">
                 <Flex
                   w="8"
@@ -63,7 +63,6 @@ export default function Navbar() {
           >
             {/* Akademi Menu */}
             <Box
-              as="a"
               px={3}
               py={2}
               fontSize="sm"
@@ -74,8 +73,10 @@ export default function Navbar() {
               onMouseLeave={() => setIsAkademiMenuOpen(false)}
             >
               <Menu isOpen={isAkademiMenuOpen}>
-                <MenuButton>Akademi</MenuButton>
-                <MenuList 
+                <Link to="/akademi">
+                  <MenuButton>Akademi</MenuButton>
+                </Link>
+                <MenuList
                   onMouseEnter={() => setIsAkademiMenuOpen(true)}
                   onMouseLeave={() => setIsAkademiMenuOpen(false)}
                 >
@@ -148,7 +149,7 @@ export default function Navbar() {
             >
               <Menu isOpen={isTentangKamiMenuOpen}>
                 <MenuButton>Tentang Kami</MenuButton>
-                <MenuList 
+                <MenuList
                   onMouseEnter={() => setIsTentangKamiMenuOpen(true)}
                   onMouseLeave={() => setIsTentangKamiMenuOpen(false)}
                 >
