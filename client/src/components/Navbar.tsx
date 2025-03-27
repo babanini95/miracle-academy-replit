@@ -15,7 +15,7 @@ import {
   MenuItem,
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { useState } from "react";
 
 export default function Navbar() {
@@ -73,9 +73,14 @@ export default function Navbar() {
               onMouseLeave={() => setIsAkademiMenuOpen(false)}
             >
               <Menu isOpen={isAkademiMenuOpen}>
-                <Link to="/akademi">
+                <NavLink
+                  to="/akademi"
+                  style={({ isActive }) => ({
+                    color: isActive ? "#805AD5" : "#6B7280",
+                  })}
+                >
                   <MenuButton>Akademi</MenuButton>
-                </Link>
+                </NavLink>
                 <MenuList
                   onMouseEnter={() => setIsAkademiMenuOpen(true)}
                   onMouseLeave={() => setIsAkademiMenuOpen(false)}
