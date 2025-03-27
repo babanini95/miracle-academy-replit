@@ -29,8 +29,6 @@ import {
   ChatIcon,
 } from "@chakra-ui/icons";
 import { FaBook, FaVideo } from "react-icons/fa";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
 
 const MotionBox = motion(Box);
 
@@ -116,7 +114,6 @@ export default function ClassDetails() {
 
   return (
     <Box>
-      <Navbar />
       <Container maxW="container.xl" py={12} px={{ base: 4, md: 6, lg: 8 }}>
         <Breadcrumb
           spacing="8px"
@@ -292,7 +289,6 @@ export default function ClassDetails() {
           </GridItem>
         </Grid>
       </Container>
-      <Footer />
     </Box>
   );
 }

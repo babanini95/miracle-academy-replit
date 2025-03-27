@@ -9,8 +9,6 @@ import {
 import { motion } from "framer-motion";
 
 const MotionBox = motion(Box);
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
 
 function CategoryCard({
   title,
@@ -71,7 +69,6 @@ export default function Akademi() {
 
   return (
     <Box>
-      <Navbar />
       <Container maxW="container.xl" py={12} px={{ base: 4, md: 6, lg: 8 }}>
         <SimpleGrid columns={{ base: 1, md: 2 }} spacing={8}>
           {categories.map((category, index) => (
@@ -83,7 +80,6 @@ export default function Akademi() {
           ))}
         </SimpleGrid>
       </Container>
-      <Footer />
     </Box>
   );
 }

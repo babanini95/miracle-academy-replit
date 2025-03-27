@@ -14,8 +14,6 @@ import {
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { ChevronRightIcon, TimeIcon, StarIcon } from "@chakra-ui/icons";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
 
 const MotionBox = motion(Box);
 
@@ -137,7 +135,6 @@ export default function ClassCategory() {
 
   return (
     <Box>
-      <Navbar />
       <Container maxW="container.xl" py={12} px={{ base: 4, md: 6, lg: 8 }}>
         <Breadcrumb
           spacing="8px"
@@ -161,7 +158,6 @@ export default function ClassCategory() {
           ))}
         </SimpleGrid>
       </Container>
-      <Footer />
     </Box>
   );
 }
