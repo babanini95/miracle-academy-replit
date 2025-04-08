@@ -167,22 +167,24 @@ export default function Navbar() {
 
           {/* Login Button */}
           <Box display={{ base: "none", md: "block" }}>
-            <Button
-              ml={4}
-              px={4}
-              py={2}
-              variant="outline"
-              borderColor="brand.500"
-              color="brand.500"
-              fontSize="sm"
-              fontWeight="medium"
-              _hover={{
-                bg: "brand.500",
-                color: "white",
-              }}
-            >
-              Daftar / Masuk
-            </Button>
+            <NavLink to="/auth/signin">
+              <Button
+                ml={4}
+                px={4}
+                py={2}
+                variant="outline"
+                borderColor="brand.500"
+                color="brand.500"
+                fontSize="sm"
+                fontWeight="medium"
+                _hover={{
+                  bg: "brand.500",
+                  color: "white",
+                }}
+              >
+                Daftar / Masuk
+              </Button>
+            </NavLink>
           </Box>
 
           {/* Mobile menu button */}
@@ -301,22 +303,24 @@ export default function Navbar() {
               </Box>
             </Stack>
             <Box pt={4} pb={3} borderTopWidth={1} borderColor="gray.200">
-              <Button
-                w="full"
-                px={4}
-                py={2}
-                variant="outline"
-                borderColor="brand.500"
-                color="brand.500"
-                fontSize="sm"
-                fontWeight="medium"
-                _hover={{
-                  bg: "brand.500",
-                  color: "white",
-                }}
-              >
-                Daftar / Masuk
-              </Button>
+              <NavLink to="/auth/signin">
+                <Button
+                  w="full"
+                  px={4}
+                  py={2}
+                  variant="outline"
+                  borderColor="brand.500"
+                  color="brand.500"
+                  fontSize="sm"
+                  fontWeight="medium"
+                  _hover={{
+                    bg: "brand.500",
+                    color: "white",
+                  }}
+                >
+                  Daftar / Masuk
+                </Button>
+              </NavLink>
             </Box>
           </Box>
         </Collapse>

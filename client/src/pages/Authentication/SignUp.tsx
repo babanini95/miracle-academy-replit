@@ -28,7 +28,7 @@ export default function SignupCard() {
       justify={"center"}
       bg={useColorModeValue("gray.50", "gray.800")}
     >
-      <Stack spacing={8} mx={"auto"} maxW={"lg"} py={12} px={6}>
+      <Stack spacing={8} mx={"auto"} maxW={"lg"} py={12} px={6} w="100%">
         <Stack align={"center"}>
           <Heading fontSize={"4xl"} textAlign={"center"}>
             Daftar
@@ -44,13 +44,16 @@ export default function SignupCard() {
             <FormControl id="fullName" isRequired>
               <FormLabel>Nama lengkap</FormLabel>
               <Input type="text" />
+              <Text fontSize={"xs"} mt={1}>
+                Masukkan nama lengkap beserta gelar jika ada
+              </Text>
             </FormControl>
-            <Text fontSize={"xs"}>
-              Masukkan nama lengkap beserta gelar jika ada
-            </Text>
             <FormControl id="email" isRequired>
               <FormLabel>Alamat email</FormLabel>
               <Input type="email" />
+              <Text fontSize={"xs"} mt={1}>
+                Gunakan email aktif
+              </Text>
             </FormControl>
             <FormControl id="password" isRequired>
               <FormLabel>Password</FormLabel>
@@ -67,6 +70,9 @@ export default function SignupCard() {
                   </Button>
                 </InputRightElement>
               </InputGroup>
+              <Text fontSize={"xs"} mt={1}>
+                Gunakan minimal 8 karakter dengan kombinasi huruf dan angka
+              </Text>
             </FormControl>
             <Stack spacing={10} pt={2}>
               <Button
@@ -78,14 +84,14 @@ export default function SignupCard() {
                   bg: "brand.500",
                 }}
               >
-                Sign up
+                Daftar
               </Button>
             </Stack>
             <Stack pt={6}>
               <Text align={"center"}>
-                Already a user?{" "}
+                Sudah mempunyai akun?{" "}
                 <ChakraLink color={"brand.400"}>
-                  <Link to="">Login</Link>
+                  <Link to="/auth/signin">Masuk</Link>
                 </ChakraLink>
               </Text>
             </Stack>

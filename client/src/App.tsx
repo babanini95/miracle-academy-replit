@@ -5,22 +5,22 @@ import { Toaster } from "@/components/ui/toaster";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import DiscountBanner from "@/components/DiscountBanner";
-import { routes, authRoutes } from "./routes";
+import { routes } from "./routes";
 
 function AppContent() {
-  const location = useLocation();
-  const isAuthRoute = location.pathname.startsWith("/auth");
-  const currentRoutes = isAuthRoute ? authRoutes : routes;
+  // const location = useLocation();
+  // const isAuthRoute = location.pathname.startsWith("/auth");
+  // const currentRoutes = isAuthRoute ? authRoutes : routes;
 
-  if (isAuthRoute) {
-    return useRoutes(currentRoutes);
-  }
+  // if (isAuthRoute) {
+  //   return useRoutes(currentRoutes);
+  // }
 
   return (
     <>
       <DiscountBanner />
       <Navbar />
-      {useRoutes(currentRoutes)}
+      {useRoutes(routes)}
       <Footer />
     </>
   );

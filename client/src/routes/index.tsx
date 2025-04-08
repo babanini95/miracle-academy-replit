@@ -30,13 +30,6 @@ export const routes: RouteObject[] = [
     element: <EditableLanding />,
   },
   {
-    path: "*",
-    element: <NotFound />,
-  },
-];
-
-export const authRoutes: RouteObject[] = [
-  {
     path: "/auth",
     children: [
       {
@@ -53,4 +46,28 @@ export const authRoutes: RouteObject[] = [
       },
     ],
   },
+  {
+    path: "*",
+    element: <NotFound />,
+  },
 ];
+
+// export const authRoutes: RouteObject[] = [
+//   {
+//     path: "/auth",
+//     children: [
+//       {
+//         path: "",
+//         element: <Navigate to="/auth/signin" replace />,
+//       },
+//       {
+//         path: "signin",
+//         element: <SignIn />,
+//       },
+//       {
+//         path: "signup",
+//         element: <SignupCard />,
+//       },
+//     ],
+//   },
+// ];
