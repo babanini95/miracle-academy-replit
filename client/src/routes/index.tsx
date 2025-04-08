@@ -5,7 +5,7 @@ import ClassCategory from "@/pages/Akademi/ClassCategory";
 import ClassDetails from "@/pages/Akademi/ClassDetails";
 import NotFound from "@/pages/not-found";
 import SignIn from "@/pages/Authentication/SignIn";
-import EditableLanding from "@/pages/AkademiLanding";
+import AkademiLanding from "@/pages/AkademiLanding";
 import SignupCard from "@/pages/Authentication/SignUp";
 
 export const routes: RouteObject[] = [
@@ -15,7 +15,7 @@ export const routes: RouteObject[] = [
   },
   {
     path: "/akademi",
-    element: <Akademi />,
+    element: <AkademiLanding />,
   },
   {
     path: "/kategori",
@@ -24,10 +24,6 @@ export const routes: RouteObject[] = [
   {
     path: "/detail",
     element: <ClassDetails />,
-  },
-  {
-    path: "/editable-landing",
-    element: <EditableLanding />,
   },
   {
     path: "/auth",

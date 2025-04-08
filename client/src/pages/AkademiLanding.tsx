@@ -36,7 +36,7 @@ export default function AkademiLanding() {
       <Box
         as="section"
         py={{ base: 12, md: 20 }}
-        bg="white"
+        bg="brand.500"
         ref={heroAnimation.ref}
       >
         <Container maxW="container.xl" px={{ base: 4, md: 6, lg: 8 }}>
@@ -53,12 +53,18 @@ export default function AkademiLanding() {
               fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }}
               fontWeight="bold"
               as="h1"
-              color="#111827"
+              color="white"
               mb={4}
+              textShadow="0 0 1px gray.400, 0 0 1px gray.400, 0 0 1px gray.400, 0 0 1px gray.400"
             >
               Miracle Akademi
             </Heading>
-            <Text fontSize={{ base: "md", md: "lg" }} color="gray.600" mb={6}>
+            <Text
+              fontSize={{ base: "md", md: "lg" }}
+              color="white"
+              mb={6}
+              textShadow="0 0 1px gray.400, 0 0 1px gray.400, 0 0 1px gray.400, 0 0 1px gray.400"
+            >
               Learn from the experts about the applications and real-time skills
               needed to create games. Through this course, you'll have the
               knowledge and expertise to develop your game from scratch!
@@ -102,7 +108,7 @@ export default function AkademiLanding() {
       </Box>
 
       {/* Mentor Section */}
-      <Box as="section" py={12} bg="#F97316" ref={mentorAnimation.ref}>
+      <Box as="section" py={12} bg="brand.500" ref={mentorAnimation.ref}>
         <Container maxW="container.xl" px={{ base: 4, md: 6, lg: 8 }}>
           <MotionBox
             initial={{ opacity: 0, y: 20 }}
